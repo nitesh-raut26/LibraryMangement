@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        #backimg1 {
+
+            position: relative;
+            background-image: url('backimg-1.jpg');
+            height: 175vh;
+
+            /* z-index: 0; */
+            box-sizing: border-box;
+            background-attachment: fixed;
+            
+        }
+
+        ul {
+            padding: 1.5rem;
+            display: flex;
+            list-style: none;
+
+        }
+
+        .navbar a {
+            font-size: 1.25rem;
+            color: white;
+            text-decoration: none;
+            margin: auto 2.5rem;
+            font-family: 'Baloo Bhai 2', cursive;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .navbar a:hover {
+            color: #FFE5CC;
+            border-bottom: 3px solid #FFE5CC;
+        }
+
+        #login {
+            /* border: 2px solid red; */
+            margin-left: auto;
+
+        }
+
+        hr {
+            border-top: 2px solid white;
+            width: 92%;
+            margin: 0px auto;
+
+        }
+
+        #logo {
+            width: 6rem;
+            height: 5rem;
+        }
+
+        #section1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: cent;
+            color: white;
+            box-sizing: border-box;
+            margin-top: 3rem;
+        }
+
+        #section1 h1 {
+            margin: 0.45rem;
+            font-size: 3.5rem;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        #section1 p {
+            /* font-weight: bold; */
+            margin: 2rem;
+            color: black;
+            font-size: 1.75rem;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #section1 span {
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        #section2 {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 8.5rem;
+        }
+
+        #section2 img {
+            height: 16.85rem;
+            width: 11rem;
+            transition: opacity 0.75s ease-in-out;
+            margin: 0.25rem;
+        }
+
+        #section2 p {
+            text-align: center;
+        }
+
+        #section2 p.genre a {
+            font-family: 'Concert One', cursive;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.35s ease-in-out;
+        }
+
+        #section2 p.title a {
+            font-family: 'Satisfy', cursive;
+            background-color: rgb(255, 218, 255);
+            color: black;
+            font-size: 1.1rem;
+            padding: 0.5rem;
+            position: relative;
+            top: -0.6rem;
+            border-radius: 0.3rem;
+        }
+
+        #section2 img:hover {
+            opacity: 0.5;
+        }
+
+        #section2 p.genre a:hover {
+            /* text-decoration: underline; */
+            font-size: 1.75rem;
+            color: rgb(252, 220, 215);
+        }
+
+
+        .coming {
+            padding: 5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(30, 5, 2);
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+            /* background-size: cover;
+            background-attachment: fixed; */
+
+        }
+
+        .coming h2 {
+            font-family: 'Kaushan Script', cursive;
+            width: 20rem;
+            height: 3.5rem;
+            /* display: inline-block; */
+            text-align: center;
+            /* border: 2px solid black; */
+            position: relative;
+            top: -2.95rem;
+            left: 0rem;
+            color: white;
+            font-size: 2.2rem;
+        }
+
+        .coming hr {
+            margin-top: -5rem;
+        }
+
+        .button {
+            height: 0px;
+        }
+
+        .view-more {
+            border: 2px solid white;
+            position: relative;
+            top: -2rem;
+            height: 1.5rem;
+            width: 6rem;
+            background-color: rgb(30, 5, 2);
+            color: white;
+            margin-left: 35.3rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+            z-index: 10;
+            font-family: 'Grandstander', cursive;
+            transition: all 0.25s ease-in;
+        }
+
+        .view-more:hover {
+            background-color: rgb(10, 2, 1);
+            height: 1.75rem;
+            width: 6.5rem;
+        }
+
+        .section3::before {
+            content: "";
+            background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1453&q=80");
+            position: absolute;
+            background-size: cover;
+            height: 71.4%;
+            width: 84%;
+            z-index: -1;
+            opacity: 0.9;
+        }
+
+        .section3 {
+            /* border: 2px solid red; */
+            display: flex;
+            flex-flow: column wrap;
+            margin: 6rem;
+            /* border-radius: 1rem; */
+        }
+
+        .section3 h3 {
+            /* border: 2px solid black; */
+            /* display: inline; */
+            text-align: center;
+            margin: 4rem;
+            font-size: 2.2rem;
+            font-family: 'Kaushan Script', cursive;
+            color: white;
+        }
+
+        .section3 hr {
+            margin-top: -3.5rem;
+        }
+
+        .section3 .services {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            /* border: 2px solid yellow; */
+            margin: 3rem;
+        }
+
+        .section3 .box::before {
+            content: "";
+            position: absolute;
+            background-color: black;
+            background-size: cover;
+            z-index: 0;
+            opacity: 0.3;
+            height: 11rem;
+            width: 10rem;
+        }
+
+        .section3 .box {
+            display: flex;
+            flex-flow: column nowrap;
+            /* border: 2px solid green; */
+            height: 11.5rem;
+            width: 10rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section3 h4 {
+            text-align: center;
+            font-size: 5.5rem;
+            color: white;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .section3 p {
+            margin: 0.6rem;
+            border: 2px solid black;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            color: white;
+            background-color: rgb(228, 41, 41);
+            border-radius: 0.5rem;
+
+        }
+
+        .section3 button {
+            border: 2px solid black;
+            margin: 0.8rem;
+            font-size: 0.85rem;
+            height: 2rem;
+            width: 8.2rem;
+            font-family: 'Grandstander', cursive;
+            cursor: pointer;
+            background: transparent;
+            color: white;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .section3 button:hover {
+            background-color: rgb(228, 41, 41);
+            border-radius: 0.25rem;
+        }
+
+        #btni:hover+#i {
+            color: black;
+        }
+
+        #btns:hover+#s {
+            color: black;
+        }
+
+        #btnr:hover+#r {
+            color: black;
+        }
+
+        #btnp:hover+#p {
+            color: black;
+        }
+
+        #btne:hover+#e {
+            color: black;
+        }
+
+        .newsection3::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1453&q=80");
+            z-index: -2;
+            opacity: 0.6;
+        }
+
+        .newsection3 {
+
+            border: 0.1px solid white;
+            position: relative;
+            /* z-index: 2; */
+            margin: 0px;
+
+        }
+        .section-4 hr{
+            border-top: 4px solid white;
+            margin-top: 1.4rem;
+        }
+
+        .section-4 {
+            display: flex;
+            flex-direction: column;
+            margin: 0.25rem;
+            background-color: #fae3e8;
+        }
+
+        .img-abt-form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .abt-form {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .img {
+            margin: 0;
+            padding: 0;
+            margin-left: 2rem;
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        .img img {
+            height: 35rem;
+            width: 30rem;
+        }
+
+        .abt {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 1.6rem;
+            background-color: rgb(250, 178, 202);
+            font-family: 'Dancing Script', cursive;
+            box-shadow: 10px 10px 5px grey;
+            
+        }
+
+        .abt h2 {
+            margin-bottom: 0.4rem;
+        }
+
+        .form {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.6rem;
+            margin: auto;
+            background-color: rgb(250, 178, 202);
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        .form input {
+            border: 2px solid rgb(250, 178, 202);
+            height: 1rem;
+            width: 14rem;
+            text-align: center;
+            font-size: 1rem;
+            padding: 0.8rem;
+            margin: 0.6rem;
+            border-radius: 0.5rem;
+            font-family: 'Grandstander', cursive;
+            background-color: #fae3e8;
+        }
+
+        .form h2 {
+            margin-bottom: 0.4rem;
+        }
+
+        .form textarea {
+            font-size: 1rem;
+            border: 2px solid rgb(250, 178, 202);
+            text-align: center;
+            padding: 0.8rem;
+            margin-top: 0.8rem;
+            border-radius: 0.5rem;
+            font-family: 'Grandstander', cursive;
+            background-color: #fae3e8;
+        }
+
+
+        .con-us {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .con-us h2 {
+            margin: 0.7rem;
+            font-size: 2rem;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin: 1rem;
+
+        }
+
+        .social {
+            background-color: rgb(250, 178, 202);
+            padding: 1.5rem;
+            font-family: 'Pacifico', cursive;
+            box-shadow: 10px 10px 5px grey;
+
+        }
+
+        .social a {
+            text-decoration: none;
+            color: black;
+            transition: all 0.4s ease-in;
+        }
+        .social a:hover{
+            color: blue;
+            font-size: 1.4rem;
+            text-decoration: underline;
+        }
+
+        .social h4 {
+            margin: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .address {
+            background-color: rgb(250, 178, 202);
+            padding: 1.5rem;
+            box-shadow: 10px 10px 5px grey;
+        }
+        
+
+        .address p {
+            font-family: 'Fjalla One', sans-serif;
+            margin: 1rem;
+        }
+
+        .subscribe {
+            background-color: rgb(250, 178, 202);
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        .subscribe p {
+            font-family: 'Kaushan Script', cursive;
+            margin: 0.4rem;
+        }
+
+        .subscribe button {
+            margin: 0.6rem;
+            margin-top: 0.4rem;
+            font-size: 0.8rem;
+            padding: 0.4rem;
+            background-color: red;
+            color: white;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            transition: all 0.4s ease-in;
+        }
+        .subscribe button:hover{
+            color: grey;
+            background-color: white;
+        } 
+
+        .blogs {
+            background-color: rgb(250, 178, 202);
+            padding: 1.5rem;
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        .blogs h3 {
+            text-decoration: underline;
+            font-family: 'Syne', sans-serif;
+        }
+        .blogs h3:hover{
+            color: blue;
+            /* font-size: 1.1rem;
+            text-decoration: underline;  */
+        }
+
+        .blogs a {
+            transition: all 0.4s ease-in;
+            text-decoration: none;
+            color: black;
+        }
+        .blogs a:hover{
+            color: blue;
+            font-size: 1.1rem;
+            text-decoration: underline;
+        }
+
+        .blogs p {
+            font-family: 'Fjalla One', sans-serif;
+            margin: 1rem;
+        }
+
+        .section-4 h2 {
+            font-family: 'Kaushan Script', cursive;
+        }
+        #hr2{
+            border-top: 3px solid black;
+            margin-top: -1rem;
+            width: 7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="backimg" id="backimg1">
+        <nav class="navbar">
+            <ul>
+                <li> <a href="#">Home</a> </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">News</a></li>
+                <li id="login"><a href="#">LogIn</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="section1">
+            <img id="logo" src="logo (5).png" alt="Logo not available">
+            <h1>DIGI LIB</h1>
+            <p>I do believe something very <span>magical &nbsp;</span>happens when u read a book.-<span>J.K.
+                    Rowling</span>
+            </p>
+        </section>
+        <section id="section2">
+            <div class="hot" id="hot-1">
+                <p class="genre"><a href="#">Erotic Romance</a></p>
+                <img src="FSG.png" alt="Book not available">
+                <p class="title"><a href="#">Fifty shades of Grey</a></p>
+            </div>
+            <div class="hot" id="hot-2">
+                <p class="genre"><a href="#">Fantasy</a></p>
+                <img src="GOT.webp" alt="Book not available">
+                <p class="title"><a href="#">Game of Thrones</a></p>
+            </div>
+            <div class="hot" id="hot-3">
+                <p class="genre"><a href="#">Fiction</a></p>
+                <img src="HP.jpg" alt="Book not available">
+                <p class="title"><a href="#">Harry potter</a></p>
+            </div>
+            <div class="hot" id="hot-4">
+                <p class="genre"><a href="#">Romance</a></p>
+                <img src="T.jpg" alt="Book not available">
+                <p class="title"><a href="#">Twilight</a></p>
+            </div>
+        </section>
+    </div>
+
+    <div class="coming">
+        <h2>coming &nbsp; soon</h2>
+        <hr>
+        <div class="book" id="book-1">
+            <img src="1.webp" alt="Book coming soon">
+        </div>
+        <div class="book" id="book-2">
+            <img src="2.webp" alt="Book coming soon">
+        </div>
+        <div class="book" id="book-3">
+            <img src="3.webp" alt="Book coming soon">
+        </div>
+        <div class="book" id="book-4">
+            <img src="4.webp" alt="Book coming soon">
+        </div>
+        <div class="book" id="book-5">
+            <img src="5.webp" alt="Book coming soon">
+        </div>
+    </div>
+    <div class="button">
+        <button type="button" class="view-more">View more</button>
+    </div>
+
+
+    <div class="newsection3">
+        <div class="section3">
+            <h3>Welcome to our vintage library</h3>
+            <hr>
+
+            <div class="services">
+                <div class="box">
+                    <button id="btni" type="button">Issue</button>
+                    <h4 id="i">I</h4>
+                    <p>check our hot collections</p>
+                </div>
+                <div class="box">
+                    <button id="btns" type="button">Submit</button>
+                    <h4 id="s">S</h4>
+                    <p>submit to save money and trees</p>
+                </div>
+                <div class="box">
+                    <button id="btnr" type="button">Request</button>
+                    <h4 id="r">R</h4>
+                    <p>get what u want at a click</p>
+                </div>
+                <div class="box">
+                    <button id="btnp" type="button">Podcasts</button>
+                    <h4 id="p">P</h4>
+                    <p>amazing pods at your tips</p>
+                </div>
+                <div class="box">
+                    <button id="btne" type="button">E-books</button>
+                    <h4 id="e">E</h4>
+                    <p>new normal way of reading</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact,About us -->
+    <div class="section-4">
+        <div class="img-abt-form">
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&w=1000&q=80"
+                    alt="Network error">
+            </div>
+            <div class="abt-form">
+                <div class="abt">
+                    <h2>About us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta modi dolore minima voluptates
+                        rerum iure optio iusto harum! Exercitationem, reiciendis beatae. Ullam consectetur praesentium
+                        aliquid tempore corporis vel totam laborum.l Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Sed commodi numquam saepe at
+                    </p>
+                   
+                </div>
+                <div class="form">
+                    <h2>Tell us about yourself</h2>
+                    <input type="text" placeholder="Enter your name">
+                    <input type="number" name="" id="" placeholder="Enter your number">
+                    <input type="email" name="" id="" placeholder="Enter your mail" required>
+                    <textarea name="" id="" cols="30" rows="5" placeholder="Talk with us!"></textarea>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="con-us">
+            <h2>Contacts</h2>
+            <hr id="hr2">
+            <div class="contact">
+                <div class="blogs">
+                    <h3>Our recent blogs</h3>
+                    <p><a href="#">Modern Vintage</a></p>
+                    <p><a href="#">Magical Reading</a></p>
+                    <p><a href="#">The Best Sellers</a></p>
+                </div>
+                <div class="social">
+                    <h4><a href="#">Instagram</a></h4>
+                    <h4><a href="#">Facebook</a></h4>
+                    <h4><a href="#">Twitter</a></h4>
+                </div>
+                <div class="address">
+                    <p>Patna,Bihar</p>
+                    <p>India</p>
+                    <p>+0546312498</p>
+                </div>
+                <div class="subscribe">
+                    <button type="button">Subscribe</button>
+                    <p>designed by-</p>
+                    <p>Virat Barnwal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
